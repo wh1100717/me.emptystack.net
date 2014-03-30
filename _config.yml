@@ -1,0 +1,4 @@
+encoding: utf-8
+name: EmptyStack
+markdown: redcarpet
+pygments: true
