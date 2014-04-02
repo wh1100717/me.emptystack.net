@@ -7,38 +7,63 @@
         <meta name="viewport" content="width=device-width">
 
         <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="../assets/css/syntax.css">
 
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="../assets/css/main.css">
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="../assets/plugin/bootstrap/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="../assets/plugin/bootstrap/css/bootstrap-theme.min.css">
+
+        <link rel="stylesheet" href="../assets/css/home.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="../assets/plugin/jquery.1.11.0.min.js"></script>
+        <script src="../assets/plugin/bootstrap/js/bootstrap.min.js"></script>
+
+
 
     </head>
     <body>
 
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
-
-          {{ content }}
-
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Your Name<br />
-                What You Are<br />
-                you@example.com
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
-            </div>
-          </div>
+      <aside id="sidebar" class="alignleft">
+        <div class="navigationBar">
+          <a href="/home.html">Eric Wang</a>
         </div>
+        <nav class="widget" id="menu">
+        <ul>
+            <li class="cell"><a class="next" href="/home.html">Home</a></li><li></li>
+            <li class="cell"><a class="next" href="#">Archives</a></li><li></li>
+            <li class="cell"><a class="next" href="#">FED</a></li><li></li>
+            <li class="cell"><a class="next" href="#">爱分享</a></li><li></li>
+            <li class="cell"><a class="next" href="#">Subscribe</a></li><li></li>
+        </ul>
+      </nav>
+      <div class="widget tagcloud">
+        <h3 class="title">Tags</h3>
+        <div class="entry">
+          <a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a><a href="/tags/JavaScript/" style="font-size: 20.00px;">JavaScript</a><a href="/tags/Software/" style="font-size: 10.00px;">Software</a><a href="/tags/Web前端/" style="font-size: 10.00px;">Web前端</a><a href="/tags/jQuery/" style="font-size: 10.00px;">jQuery</a><a href="/tags/markdown/" style="font-size: 10.00px;">markdown</a><a href="/tags/兼容性/" style="font-size: 10.00px;">兼容性</a><a href="/tags/前端工具/" style="font-size: 16.67px;">前端工具</a><a href="/tags/前端规范/" style="font-size: 10.00px;">前端规范</a><a href="/tags/跨域/" style="font-size: 10.00px;">跨域</a><a href="/tags/项目总结/" style="font-size: 16.67px;">项目总结</a>
+        </div>
+      </div>
+    </aside>
+    <div id="hidden-navigationBar" class="navigationBar">
+      <a href="/home.html">Eric Wang</a>
+    </div>
+    <div id="main-col" class="alignright">
+      <div id="wrapper">
+        {{ content }}
+      </div>
+    </div>
 
+    <div class="tabbar" onload="divideTabBar()">
+          <div class="tabbaritem"><a class="next" href="/home.html">Home</a></div>
+          <div class="tabbaritem"><a class="next" href="#">Archives</a></div>
+          <div class="tabbaritem"><a class="next" href="#">FED</a></div>
+          <div class="tabbaritem"><a class="next" href="#">爱分享</a></div>
+          <div class="tabbaritem"><a class="next" href="#">Subscribe</a></div>
+    </div>
     </body>
 </html>
