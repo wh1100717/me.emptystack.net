@@ -115,11 +115,13 @@ a:hover {
 }
 #main-col {
   width: 900px;
+  padding-right: 7%;
 }
 @media screen and (max-width: 1260px) {
   #main-col {
     width: 100%;
     margin-left: -280px;
+    padding-right: 0px;
   }
 }
 #hidden-navigationBar {
@@ -958,4 +960,9 @@ pre .clojure .title {
 }
 pre .deletion {
   color: #dc322f;
+}
+
+
+#disqus_thread{
+  padding: 3%!important
 }
