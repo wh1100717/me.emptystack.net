@@ -1,0 +1,15 @@
+<!doctype html>
+<html ng-app lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <script src="assets/plugin/angular/angular.js"></script>
+</head>
+<body>
+    Your name: <input type="text" ng-model="yourname" placeholder="World">
+    <hr>
+    Hello {{yourname || 'World'}}!
+    {{99999 | number}}
+
+</body>
+</html>
