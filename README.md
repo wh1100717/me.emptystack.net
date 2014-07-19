@@ -59,7 +59,7 @@
 
 *     Swift 中文翻译小组成员
 *     主要负责 [《字符串和字符》](http://numbbbbb.github.io/the-swift-programming-language-in-chinese/chapter2/03_Strings_and_Characters.html)及[《闭包》](http://numbbbbb.github.io/the-swift-programming-language-in-chinese/chapter2/07_Closures.html)章节
-*     目前项目 STAR 数1300+
+*     目前项目 STAR 数6000+
 *     项目地址点击 [这里](https://github.com/numbbbbb/the-swift-programming-language-in-chinese) 查看
 
 ### 其他项目
