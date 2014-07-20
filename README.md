@@ -5,7 +5,6 @@
 
 ---
 
-*     1987年出生
 *     2006.09 - 2010.07 哈尔滨
      *     哈尔滨工程大学 本科
      *     计算机科学与技术
@@ -77,7 +76,7 @@
 
 *     TEL: +86 186 6580 1640
 *     Webio: http://weibo.com/yourseric
-*     Email: me@emptystack.net 或者 1100717@qq.com 或者 eric.3126@gmail.com
+*     Email: me@emptystack.net | 1100717@qq.com | eric.3126@gmail.com
 *     Github: https://github.com/wh1100717
 *     Twitter: https://twitter.com/wh1100717
 *     SegmentFault: http://segmentfault.com/u/wh1100717
