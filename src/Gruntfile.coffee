@@ -17,6 +17,14 @@ module.exports = (grunt) ->
         clean:
             build: ['build']
             tmp: ['.tmp']
+        coffee:
+            compile:
+                expand: true
+                flatten: true
+                cwd: 'coffee'
+                src: ['*.coffee']
+                dest: '.tmp/build/js/'
+                ext: '.js'
         stylus:
             options:
                 compress: false
@@ -103,6 +111,9 @@ module.exports = (grunt) ->
                 options:
                     open: true
         watch:
+            coffee:
+                files: 'coffee/**/*'
+                tasks: ['coffee']
             jade:
                 files: 'jade/**/*'
                 tasks: ['jade:serve']
@@ -132,6 +143,7 @@ module.exports = (grunt) ->
 
     grunt.registerTask 'serve', [
         'clean:tmp'
+        'coffee'
         'stylus'
         'postcss:serve'
         'jade:serve'
@@ -140,6 +152,7 @@ module.exports = (grunt) ->
     ]
     grunt.registerTask 'build', [
         'clean'
+        'coffee'
         'stylus'
         'postcss:build'
         'jade:build'
