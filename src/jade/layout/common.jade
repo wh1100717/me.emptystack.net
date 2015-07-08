@@ -15,4 +15,12 @@ html(lang="en")
         link(rel="stylesheet", href="#{baseurl}/css/index.css")
     body
         block content
-        script(src="#{baseurl}/js/index.js")
+        script(src="#{baseurl}/asset/fancy.js")
+        script(src="#{baseurl}/js/seed.js")
+        script(src="#{baseurl}/asset/gsap/TweenLite.js")
+        script(src="#{baseurl}/asset/gsap/TweenMax.js")
+        script.
+            require(['js/index'], function(Index){
+                Index.init();
+                window.Index = Index
+            });
