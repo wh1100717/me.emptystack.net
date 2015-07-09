@@ -16,24 +16,25 @@ module.exports = (grunt) ->
         """
         clean:
             build: [
-                '../css'
-                '../js'
+                'css'
+                'js'
+                'asset'
+                '*.html'
             ]
             tmp: ['.tmp']
         coffee:
             compile:
                 expand: true
-                cwd: 'coffee'
+                cwd: 'src/coffee'
                 src: ['**/*.coffee']
                 dest: '.tmp/build/js/'
                 ext: '.js'
         stylus:
             options:
                 compress: false
-                paths: ['stylus']
             serve:
                 files:
-                    '.tmp/build/css/index.css': 'styl/index.styl'
+                    '.tmp/build/css/index.css': 'src/styl/index.styl'
         postcss:
             serve:
                 options:
@@ -65,7 +66,7 @@ module.exports = (grunt) ->
                     #     return content
                 files: [{
                     expand: true
-                    cwd: "jade/"
+                    cwd: "src/jade/"
                     src: ["*.jade"]
                     dest: ".tmp/build/"
                     ext: ".html"
@@ -78,9 +79,9 @@ module.exports = (grunt) ->
                         version: '<%= pkg.version %>'
                 files: [{
                     expand: true
-                    cwd: "jade/"
+                    cwd: "src/jade/"
                     src: ["*.jade"]
-                    dest: "build/"
+                    dest: "./"
                     ext: ".html"
                 }]
         copy:
@@ -88,7 +89,12 @@ module.exports = (grunt) ->
                 expand: true
                 cwd: ".tmp/build/"
                 src: ["*/**"]
-                dest: "../"
+                dest: "./"
+            asset:
+                expand: true
+                cwd: "src/"
+                src: ["asset/**/*"]
+                dest: "./"
         connect:
             options:
                 port: 9008
@@ -114,13 +120,13 @@ module.exports = (grunt) ->
                     open: true
         watch:
             coffee:
-                files: 'coffee/**/*'
+                files: 'src/coffee/**/*'
                 tasks: ['coffee']
             jade:
-                files: 'jade/**/*'
+                files: 'src/jade/**/*'
                 tasks: ['jade:serve']
             stylus:
-                files: 'styl/**/*.styl'
+                files: 'src/styl/**/*.styl'
                 tasks: ['stylus', 'postcss:serve']
             livereload:
                 options:
@@ -139,7 +145,8 @@ module.exports = (grunt) ->
                     banner: '<%= banner %>'
                 files:
                     src: [
-                        'build/css/*.css'
+                        'css/*.css'
+                        'js/**/*.js'
                     ]
     }
 

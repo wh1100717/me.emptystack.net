@@ -4,7 +4,7 @@ define (require, exports, module) ->
     TweenMax = require("TweenMax")
     SplitText = require("SplitText")
     Experience = require("./experience")
-    Skill = require("/asset/skill.js")
+    Skill = require("../../asset/skill.js")
     console.log Skill
 
     firstPage =
