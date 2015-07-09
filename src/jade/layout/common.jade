@@ -19,6 +19,8 @@ html(lang="en")
         script(src="#{baseurl}/asset/fancy.js")
         script(src="#{baseurl}/js/seed.js")
         script.
-            require(['js/index'], function(Index){
-                Index.init();
-            });
+            $(document).ready(function(){
+                require(['js/index'], function(Index){
+                    Index.init();
+                });
+            })

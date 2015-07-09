@@ -2,11 +2,18 @@ extends layout/common.jade
 
 block content
     #first-page.clearfix
-        .intro-content
-            .heading Hey!
-            p.intro Im Eric Wang, fancy to meet u!
-            p.intro More about me? Scroll down and check it out! >_<
+        .intro-wrap(style="vertical-align: middle;")
+            h1.heading Whats Up!
+            .content(style="display: none;")
+                p Im Eric Wang, fancy to meet u!
+                p More about me? Scroll down and check it out! >_<
             .scroll-label
                 i.fa.fa-angle-double-down
     #second-page.clearfix
+        .intro-wrap(style="display:block")
+            h1 Who Am I
+            .content
+                p I think & code & dream, there I am
+        .experience-wrap.clearfix(init="false")
+            #experienceTimeLine
         

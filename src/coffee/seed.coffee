@@ -1,6 +1,7 @@
 require.config {
     urlArgs: if debug then "bust=#{(new Date()).getTime()}" else ""
     paths: {
+        Raphael: 'asset/raphael'
         TweenLite: 'asset/gsap/TweenLite'
         TweenMax: 'asset/gsap/TweenMax'
         TimelineMax: 'asset/gsap/TimelineMax'
