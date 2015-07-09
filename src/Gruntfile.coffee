@@ -20,9 +20,8 @@ module.exports = (grunt) ->
         coffee:
             compile:
                 expand: true
-                flatten: true
                 cwd: 'coffee'
-                src: ['*.coffee']
+                src: ['**/*.coffee']
                 dest: '.tmp/build/js/'
                 ext: '.js'
         stylus:
