@@ -15,7 +15,10 @@ module.exports = (grunt) ->
         
         """
         clean:
-            build: ['build']
+            build: [
+                '../css'
+                '../js'
+            ]
             tmp: ['.tmp']
         coffee:
             compile:

@@ -3,7 +3,9 @@ define (require, exports, module) ->
     
     TweenMax = require("TweenMax")
     SplitText = require("SplitText")
-    secondPage = require("./secondPage")
+    Experience = require("./experience")
+    Skill = require("/asset/skill.js")
+    console.log Skill
 
     firstPage =
         init: ->
@@ -41,13 +43,21 @@ define (require, exports, module) ->
                 self.isScrolling = false
                 if $(".experience-wrap").attr("init") is "false"
                     $(".experience-wrap").attr("init", "true")
-                    secondPage.init()
+                    Experience.init()
+                    Skill.init()
+                    $(".skillsList li").hover( ->
+                        e = "arc-" + $(this).text().toLowerCase()
+                        $("#" + e).trigger("mouseover")
+                    , ->
+                        e = "arc-" + $(this).text().toLowerCase()
+                        $("#" + e).trigger("mouseout")
+                    )
 
         animation: ->
             heading = @fp.find(".heading")
             content = @fp.find(".content p")
             headingSplit = new SplitText(heading, {type:"words, chars"})
-            contentSplit = new SplitText(content, type: "words")
+            contentSplit = new SplitText(content, type: "words, chars")
             heading.show()
             @fp.find(".content").show()
             TweenMax.staggerFrom headingSplit.chars, 2, {
@@ -58,14 +68,14 @@ define (require, exports, module) ->
                 transformOrigin: "0% 50% -50"
                 ease: Back.easeOut
             }, 0.01, -> headingSplit.revert()
-            TweenMax.staggerFrom contentSplit.words, 1, {
+            TweenMax.staggerFrom contentSplit.chars, 1, {
                 opacity: 0
                 scale: 0
                 y: 80
                 rotationX: 90
                 transformOrigin: "0 50% -50"
                 ease: Back.easeOut
-            }, 0.1, -> contentSplit.revert()
+            }, 0.2, -> contentSplit.revert()
             @sl = @fp.find(".scroll-label")
             @sl.show()
             @scrollLabel = TweenMax.fromTo @sl, 1.5, {

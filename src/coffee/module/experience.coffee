@@ -3,7 +3,7 @@ define (require, exports, module) ->
 
     Raphael = require("Raphael")
 
-    secondPage =
+    Experience =
         init: ->
             # window.Raphael = Raphael
             timeline = new Raphael(document.getElementById("experienceTimeLine"), 900, 800)
@@ -63,4 +63,4 @@ define (require, exports, module) ->
                 }
                 timeline.text(cate[1] + 25, 30, cate[2]).attr(textStyle)
 
-    module.exports = secondPage
+    module.exports = Experience
