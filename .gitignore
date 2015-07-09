@@ -1,2 +1,5 @@
 _site
 .tmp
+dist
+npm-debug.log
+node_modules

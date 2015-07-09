@@ -19,15 +19,61 @@
 *     2013.12 - 2014.06 哈尔滨
      *     宝利明威
      *     Python&&前端
-*     2014.07 - 杭州
+*     2014.07 - 2015.07
      *     阿里巴巴
      *     前端
+
+##项目经历(2015)
+
+---
+
+**Note1**: 以下项目没有特殊说明，则表示我为发起者和主要贡献者。
+
+**Note2**: 以下项目不包含公司内部的项目，只是部分托管在Github上的开源项目。
+
+### Fancy
+
+*   Fancy(In Progress)基于Bootstrap，用Stylus进行了重写
+*   融合Material Design以及各种动态交互效果，最终形成一套独具特色的前端样式框架
+
+### LocalDB
+
+*   LocalDB 为开发者提供简单、易用又强大的浏览器端数据存取接口，其被设计用来为 WEB 应用、手机 H5 应用、网页游戏引擎提供浏览器端持久化存储方案
+*   基于 JSON 文档风格的存储方式
+*   支持多种数据格式的存储，例如：函数、正则表达式
+*   支持基于文档的富查询及排序功能
+*   支持 AMD/CMD/Standalone 等多种模块加载方式
+*   支持数据存取加密功能
+*   智能存储引擎切换
+*   支持域白名单功能，实现跨域共享数据，独特的跨域数据共享解决方案
+*   独特的域数据模块化解决方案
+*   高安全性(可以通过更改proxy来隐藏数据所存储的真实域)
+*   支持 Promise 或 Callback 异步编程
+*   支持 BSON objectId
+
+### Dingo Coder
+
+*   基于Polymer 0.5开发的Web Component组件，通过标签的方式自动渲染代码，并解析对应的hmtl/css/js进行代码预览
+*   集成了Firebase，可以实现用户注册和登陆，其实完全可以扩展成一个类似于多说的具有交互性的代码分享和讨论组件，目前具体包含的特性jsFiddle/codepen也只是部分实现，蛮好玩的一个东西
+
+### Generator Tree
+
+*   基于Yoeman的项目生成器，主要用于在阿里的时候公司内部项目的新项目创建和骨架生成
+*   其包含了内部项目用到的部分工具和代码示例以及调试对应的通用性代码等
+
+### Drip
+
+*   基于CSS Preprocessor的框架，摆脱目前先用css框架模式的一种尝试，只写Stylus的Mixin和Function，然后在项目中直接进行Stylus的引用，最终编译对应的css代码，好处就是不需要额外引用css库。而且如果项目不是复杂的话生成的css代码量也会很少
+*   写了一些以后没有继续，原因是框架的使用难度比较大....需要记很多的mixin和function，而且项目复杂起来的话生成的重复样式代码可能会很多，尤其是涉及到动画效果等
+
+### 其他项目
+
+*   evemit: 事件处理库，封装了常用的各种事件处理接口
+*   jquery-xwaterfall: 一个支持多种animation的瀑布流jQuery插件
 
 ##项目经历(2014)
 
 ---
-
-**Note**: 以下项目没有特殊说明，则表示我为发起者和主要贡献者。
 
 ### PolySpider
 
@@ -38,20 +84,20 @@
 
 ### PolyTechDocs
 
-*     [PolyTechDocs](http://poly.emptystack.net/)是一个文档协同撰写项目。
-*     采用了Jekyll模版，使得可以在忽略字体大小样式，代码格式等方面的情况下进行专注于内容的高效文档撰写。支持MarkDown、Textile、Liquid、HTML&CSS等多种方式进行文档撰写。同时利用GitHub提供的Branch Pull&&Merge模式实现多人协同高效开发。
+*     [PolyTechDocs](http://poly.emptystack.net/)是一个文档协同撰写项目
+*     采用了Jekyll模版，使得可以在忽略字体大小样式，代码格式等方面的情况下进行专注于内容的高效文档撰写。支持MarkDown、Textile、Liquid、HTML&CSS等多种方式进行文档撰写。同时利用GitHub提供的Branch Pull&&Merge模式实现多人协同高效开发
 *     Github Pages | Jekyll | Markdown | Pygments
 
 ### PolyEMM
 
-*     PolyEMM是一个采用Python开发的企业移动管理项目。
+*     PolyEMM是一个采用Python开发的企业移动管理项目
 *     企业移动管理Python版Server端的实现
 *     Tornado | Mako | MongoDB | Nose | Getui | Jasmine
 
 ### 前端重构项目
 
-*     实现原有Java项目中的Controller层和View层业务从后台的剥离。
-*     采用Backend Server -- Frontend Server -- Frontend的架构模式，将整个项目中的Controller层和View层分离出来构建单独的前端项目，使得后台开发更专注于数据逻辑和性能及测试，前端和后台通过RESTful API进行交互，各自可以独立开发，并可以进行很好的整合。另外提高了业务需求的定制型开发的灵活性。
+*     实现原有Java项目中的Controller层和View层业务从后台的剥离
+*     采用Backend Server -- Frontend Server -- Frontend的架构模式，将整个项目中的Controller层和View层分离出来构建单独的前端项目，使得后台开发更专注于数据逻辑和性能及测试，前端和后台通过RESTful API进行交互，各自可以独立开发，并可以进行很好的整合。另外提高了业务需求的定制型开发的灵活性
 *     NodeJS | AngularJS | CoffeeScript | MongoDB | Express | Ace Template | Passport | grunt | bower | KISSY | Karma
 
 ### 中文版 Swift 教程《The Swift Programming Language》
@@ -74,55 +120,8 @@
 
 ---
 
-*     TEL: +86 186 6580 1640
 *     Webio: http://weibo.com/yourseric
-*     Email: me@emptystack.net | 1100717@qq.com | eric.3126@gmail.com
+*     Email: me@emptystack.net
 *     Github: https://github.com/wh1100717
 *     Twitter: https://twitter.com/wh1100717
 *     SegmentFault: http://segmentfault.com/u/wh1100717
-
-## 下半年关注重心
-
----
-
--   HTML&&CSS
-    -   [ ] HTML5
-    -   [ ] CSS3
-    -   [ ] Responsive Web Design
-    -   [ ] LESS
-    -   [ ] SASS/SCSS
-    -   [ ] compass
-    -   [ ] Stylus
-    -   [ ] yue.css
--   Javascript
-    -   [ ] Koajs
-    -   [ ] Meteor
-    -   [ ] Gulp
-    -   [ ] AngularJS
--   Data Visualization
-    -   [ ] processing
-    -   [ ] ZRender
-    -   [ ] ECharts
-    -   [ ] Chartjs
-    -   [ ] Rapheal
-    -   [ ] Epoch
-    -   [ ] Kity
--   iOS Related
-    -   [ ] Swift
-    -   [ ] Objective-C
-    -   [ ] CocoaPods
--   Data Store
-    -   [ ] Redis
-    -   [ ] MongoDB
-    -   [ ] RethinkDB
-    -   [ ] Cayley
--   Others
-    -   [ ] FEX-fis
-    -   [ ] Golang
-    -   [ ] Seajs
-    -   [ ] Ajenti
-    -   [ ] Component/Bower/NPM
-    -   [ ] Grunt
-    -   [ ] Travis
-    -   [ ] awesome-awesomeness
-    -   [ ] leetcode
