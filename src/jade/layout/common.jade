@@ -11,14 +11,14 @@ html(lang="en")
         meta(name="email", conen="me@emptystack.net")
         link(rel="stylesheet", href="#{baseurl}/asset/fancy.css")
         link(rel="stylesheet", href="#{baseurl}/asset/font-awesome/css/font-awesome.min.css")
-        link(rel="stylesheet", href="#{baseurl}/asset/animate.css")
         link(rel="stylesheet", href="#{baseurl}/css/index.css")
     body
         block content
+        script.
+            debug = #{debug};
         script(src="#{baseurl}/asset/fancy.js")
         script(src="#{baseurl}/js/seed.js")
         script.
             require(['js/index'], function(Index){
                 Index.init();
-                window.Index = Index
             });
