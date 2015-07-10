@@ -9,7 +9,6 @@
     console.log(Skill);
     firstPage = {
       init: function() {
-        $("body").scrollTop(0);
         this.fp = $("#first-page");
         this.fp.height($(window).height());
         this.animation();

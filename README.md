@@ -54,7 +54,7 @@
 ### Dingo Coder
 
 *   [Dingo Coder](https://github.com/wh1100717/dingo-coder)基于 Polymer v0.5 开发的 Web Component 组件，通过标签的方式自动渲染代码，并解析对应的 html/css/js 进行代码预览
-*   集成了Firebase，可以实现用户注册和登陆，其实完全可以扩展成一个类似于多说的具有交互性的代码分享和讨论组件，目前具体包含的特性 jsFiddle/codepen 也只是部分实现，蛮好玩的一个东西
+*   集成了 Firebase，可以实现用户注册和登陆，其实完全可以扩展成一个类似于多说的具有交互性的代码分享和讨论组件，目前具体包含的特性 jsFiddle/codepen 也只是部分实现，蛮好玩的一个东西
 
 ### Generator Tree
 

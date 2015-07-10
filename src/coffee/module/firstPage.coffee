@@ -9,7 +9,6 @@ define (require, exports, module) ->
 
     firstPage =
         init: ->
-            $("body").scrollTop(0)
             @fp = $("#first-page")
             @fp.height($(window).height())
             @animation()
@@ -18,7 +17,6 @@ define (require, exports, module) ->
             $(window).resize => @fp.height($(window).height())
             @sl.mouseenter => @scrollLabel.pause()
             @sl.mouseout => @scrollLabel.resume()
-
             @isScrolling = false
             @sl.click =>
                 @scroll_down()

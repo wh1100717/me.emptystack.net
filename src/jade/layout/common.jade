@@ -28,6 +28,7 @@ html(lang="en")
         script(src="#{baseurl}/js/seed.js")
         script.
             $(document).ready(function(){
+                $(this).scrollTop(0);
                 require(['js/index'], function(Index){
                     Index.init();
                 });
