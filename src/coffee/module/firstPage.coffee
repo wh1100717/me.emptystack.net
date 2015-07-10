@@ -78,7 +78,7 @@ define (require, exports, module) ->
             }, 0.2, -> contentSplit.revert()
             @sl = @fp.find(".scroll-label")
             @sl.show()
-            @scrollLabel = TweenMax.fromTo @sl, 1.5, {
+            @scrollLabel = TweenMax.fromTo @sl, 1, {
                 opacity: 0
                 scale: 0
                 y: -40
@@ -86,8 +86,8 @@ define (require, exports, module) ->
                 opacity: 0.8
                 scale: 1
                 y: 0
-                delay: 1.5
+                delay: 0.5
             }
-            @scrollLabel.repeat(-1).repeatDelay(0.7).play()
+            @scrollLabel.repeat(-1).repeatDelay(0.5).play()
 
     module.exports = firstPage

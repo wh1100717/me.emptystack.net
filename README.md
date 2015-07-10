@@ -33,12 +33,12 @@
 
 ### Fancy
 
-*   Fancy(In Progress)基于Bootstrap，用Stylus进行了重写
-*   融合Material Design以及各种动态交互效果，最终形成一套独具特色的前端样式框架
+*   [Fancy](https://github.com/wh1100717/fancy)(In Progress) 基于 Bootstrap，用 Stylus 进行了重写
+*   融合 Material Design 以及各种动态交互效果，最终形成一套独具特色的前端样式框架
 
 ### LocalDB
 
-*   LocalDB 为开发者提供简单、易用又强大的浏览器端数据存取接口，其被设计用来为 WEB 应用、手机 H5 应用、网页游戏引擎提供浏览器端持久化存储方案
+*   [LocalDB](https://github.com/wh1100717/localDB) 为开发者提供简单、易用又强大的浏览器端数据存取接口，其被设计用来为 WEB 应用、手机 H5 应用、网页游戏引擎提供浏览器端持久化存储方案
 *   基于 JSON 文档风格的存储方式
 *   支持多种数据格式的存储，例如：函数、正则表达式
 *   支持基于文档的富查询及排序功能
@@ -53,23 +53,23 @@
 
 ### Dingo Coder
 
-*   基于Polymer 0.5开发的Web Component组件，通过标签的方式自动渲染代码，并解析对应的hmtl/css/js进行代码预览
-*   集成了Firebase，可以实现用户注册和登陆，其实完全可以扩展成一个类似于多说的具有交互性的代码分享和讨论组件，目前具体包含的特性jsFiddle/codepen也只是部分实现，蛮好玩的一个东西
+*   [Dingo Coder](https://github.com/wh1100717/dingo-coder)基于 Polymer v0.5 开发的 Web Component 组件，通过标签的方式自动渲染代码，并解析对应的 html/css/js 进行代码预览
+*   集成了Firebase，可以实现用户注册和登陆，其实完全可以扩展成一个类似于多说的具有交互性的代码分享和讨论组件，目前具体包含的特性 jsFiddle/codepen 也只是部分实现，蛮好玩的一个东西
 
 ### Generator Tree
 
-*   基于Yoeman的项目生成器，主要用于在阿里的时候公司内部项目的新项目创建和骨架生成
+*   [Generator Tree](https://github.com/wh1100717/generator-tree)基于 Yoeman 的项目生成器，主要用于在阿里的时候公司内部项目的新项目创建和骨架生成
 *   其包含了内部项目用到的部分工具和代码示例以及调试对应的通用性代码等
 
 ### Drip
 
-*   基于CSS Preprocessor的框架，摆脱目前先用css框架模式的一种尝试，只写Stylus的Mixin和Function，然后在项目中直接进行Stylus的引用，最终编译对应的css代码，好处就是不需要额外引用css库。而且如果项目不是复杂的话生成的css代码量也会很少
-*   写了一些以后没有继续，原因是框架的使用难度比较大....需要记很多的mixin和function，而且项目复杂起来的话生成的重复样式代码可能会很多，尤其是涉及到动画效果等
+*   [Drip](https://github.com/wh1100717/drip)基于CSS Preprocessor的框架，摆脱目前先用 CSS 框架模式的一种尝试，只写 Stylus 的 Mixin 和 Function ，然后在项目中直接进行 Stylus 的引用，最终编译对应的 CSS 代码，好处就是不需要额外引用 CSS 库。而且如果项目不是复杂的话生成的 CSS 代码量也会很少
+*   写了一些以后没有继续，原因是框架的使用难度比较大....需要记很多的 mixin 和 function，而且项目复杂起来的话生成的重复样式代码可能会很多，尤其是涉及到动画效果等
 
 ### 其他项目
 
-*   evemit: 事件处理库，封装了常用的各种事件处理接口
-*   jquery-xwaterfall: 一个支持多种animation的瀑布流jQuery插件
+*   [evemit](https://github.com/wh1100717/evemit): 事件处理库，封装了常用的各种事件处理接口
+*   [jquery-xwaterfall](https://github.com/wh1100717/jquery-xwaterfall): 一个支持多种 animation 的瀑布流 jQuery 插件
 
 ##项目经历(2014)
 

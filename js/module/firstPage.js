@@ -117,7 +117,7 @@
         });
         this.sl = this.fp.find(".scroll-label");
         this.sl.show();
-        this.scrollLabel = TweenMax.fromTo(this.sl, 1.5, {
+        this.scrollLabel = TweenMax.fromTo(this.sl, 1, {
           opacity: 0,
           scale: 0,
           y: -40
@@ -125,9 +125,9 @@
           opacity: 0.8,
           scale: 1,
           y: 0,
-          delay: 1.5
+          delay: 0.5
         });
-        return this.scrollLabel.repeat(-1).repeatDelay(0.7).play();
+        return this.scrollLabel.repeat(-1).repeatDelay(0.5).play();
       }
     };
     return module.exports = firstPage;
