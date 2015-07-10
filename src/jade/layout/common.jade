@@ -12,6 +12,14 @@ html(lang="en")
         link(rel="stylesheet", href="#{baseurl}/asset/fancy.css")
         link(rel="stylesheet", href="#{baseurl}/asset/font-awesome/css/font-awesome.min.css")
         link(rel="stylesheet", href="#{baseurl}/css/index.css")
+        script.
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "//hm.baidu.com/hm.js?002ef1fafc6fa311e40263049f5e7bca";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
     body
         block content
         script.
