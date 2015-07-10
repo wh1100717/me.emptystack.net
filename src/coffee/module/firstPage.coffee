@@ -11,6 +11,7 @@ define (require, exports, module) ->
         init: ->
             @fp = $("#first-page")
             @fp.height($(window).height())
+            $(document).scrollTop(0)
             @animation()
             @event_bind()
         event_bind: ->

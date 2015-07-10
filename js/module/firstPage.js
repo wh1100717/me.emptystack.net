@@ -11,6 +11,7 @@
       init: function() {
         this.fp = $("#first-page");
         this.fp.height($(window).height());
+        $(document).scrollTop(0);
         this.animation();
         return this.event_bind();
       },
