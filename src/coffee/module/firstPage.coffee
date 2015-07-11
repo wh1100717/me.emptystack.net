@@ -15,10 +15,10 @@ define (require, exports, module) ->
             @animation()
             @event_bind()
         get_viewport_height: ->
-            if window.orientation and Math.abs(window.orientation) is 90
-                Math.max document.documentElement.clientWidth, window.innerWidth
+            if window.orientation? and Math.abs(window.orientation) is 90
+                return window.innerWidth
             else
-                Math.max document.documentElement.clientHeight, window.innerHeight
+                return window.innerHeight
         event_bind: ->
             $(window).resize => @fp.height(@get_viewport_height())
             @sl.mouseenter => @scrollLabel.pause()
@@ -38,7 +38,7 @@ define (require, exports, module) ->
                 old_scroll = new_scroll
                 @scroll_down()
             #判断手机是横屏还是竖屏
-            window.addEventListener "orientationchange", resize if window.orientation
+            window.addEventListener "orientationchange", resize if window.orientation?
         scroll_down: ->
             return if @isScrolling
             @isScrolling = true
