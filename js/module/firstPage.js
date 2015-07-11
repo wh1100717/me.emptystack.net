@@ -45,10 +45,16 @@
             return _this.scroll_down();
           };
         })(this));
+        if (window.orientation != null) {
+          window.addEventListener("orientationchange", resize);
+        }
         old_scroll = $(window).scrollTop();
-        $(window).scroll((function(_this) {
+        return $(window).scroll((function(_this) {
           return function() {
             var new_scroll;
+            if ((window.orientation != null) && Math.abs(window.orientation) === 90) {
+              return;
+            }
             new_scroll = $(window).scrollTop();
             if (new_scroll - old_scroll <= 0) {
               old_scroll = new_scroll;
@@ -62,9 +68,6 @@
             return _this.scroll_down();
           };
         })(this));
-        if (window.orientation != null) {
-          return window.addEventListener("orientationchange", resize);
-        }
       },
       scroll_down: function() {
         var self;

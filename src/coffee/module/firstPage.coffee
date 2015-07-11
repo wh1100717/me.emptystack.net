@@ -26,8 +26,11 @@ define (require, exports, module) ->
             @isScrolling = false
             @sl.click =>
                 @scroll_down()
+            #判断手机是横屏还是竖屏
+            window.addEventListener "orientationchange", resize if window.orientation?
             old_scroll = $(window).scrollTop()
             $(window).scroll =>
+                return if window.orientation? and Math.abs(window.orientation) is 90
                 new_scroll = $(window).scrollTop()
                 if new_scroll - old_scroll <= 0
                     old_scroll = new_scroll
@@ -37,8 +40,6 @@ define (require, exports, module) ->
                     return
                 old_scroll = new_scroll
                 @scroll_down()
-            #判断手机是横屏还是竖屏
-            window.addEventListener "orientationchange", resize if window.orientation?
         scroll_down: ->
             return if @isScrolling
             @isScrolling = true
