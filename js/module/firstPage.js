@@ -60,12 +60,7 @@
         old_scroll = $(window).scrollTop();
         return $(window).scroll((function(_this) {
           return function() {
-            var new_height, new_scroll;
-            new_height = _this.get_viewport_height();
-            if (_this.screen_height !== new_height) {
-              _this.screen_height = new_height;
-              _this.reset_height();
-            }
+            var new_scroll;
             new_scroll = $(window).scrollTop();
             if (new_scroll - old_scroll <= 0) {
               old_scroll = new_scroll;

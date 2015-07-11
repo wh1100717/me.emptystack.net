@@ -36,10 +36,6 @@ define (require, exports, module) ->
             window.addEventListener "orientationchange", resize if window.orientation?
             old_scroll = $(window).scrollTop()
             $(window).scroll =>
-                new_height = @get_viewport_height()
-                if @screen_height isnt new_height
-                    @screen_height = new_height
-                    @reset_height()
                 new_scroll = $(window).scrollTop()
                 if new_scroll - old_scroll <= 0
                     old_scroll = new_scroll
