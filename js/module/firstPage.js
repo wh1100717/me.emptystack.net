@@ -16,7 +16,6 @@
         return this.event_bind();
       },
       get_viewport_height: function() {
-        alert(window.orientation, window.innerWidth, window.innerHeight);
         if (window.orientation && Math.abs(window.orientation) === 90) {
           return Math.max(document.documentElement.clientWidth, window.innerWidth);
         } else {
