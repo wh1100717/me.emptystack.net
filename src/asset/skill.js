@@ -36,7 +36,7 @@ define(function(require, module, exports) {
             });
             f.push(n),
             setTimeout(function() {
-                var t = e.text(703, 250, "{ Empty }\nStacker").attr({
+                var t = e.text(703, 260, "{ Empty }\nStacker").attr({
                     "font-size": 22,
                     fill: "#fff",
                     "font-family": s
