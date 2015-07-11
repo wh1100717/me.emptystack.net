@@ -5,35 +5,30 @@ define (require, exports, module) ->
     SplitText = require("SplitText")
     Experience = require("./experience")
     Skill = require("../../asset/skill.js")
-    console.log Skill
 
     firstPage =
         init: ->
             @fp = $("#first-page")
-            @screen_height = @get_viewport_height()
+            @screenHeight = @get_screen_height()
             @reset_height()
             $(document).scrollTop(0)
             @animation()
             @event_bind()
-        get_viewport_height: ->
-            if window.orientation? and Math.abs(window.orientation) is 90
-                return window.innerWidth
-            else
-                return window.innerHeight
-        reset_height: -> @fp.height(@screen_height)
+        get_screen_height: ->
+            return if window.orientation? and Math.abs(window.orientation) is 90 then window.innerWidth else window.innerHeight
+        reset_height: -> @fp.height(@screenHeight)
         event_bind: ->
             $(window).resize =>
-                new_height = @get_viewport_height()
-                if @screen_height isnt new_height
-                    @screen_height = new_height
+                newHeight = @get_screen_height()
+                if @screenHeight isnt newHeight
+                    @screenHeight = newHeight
                     @reset_height()
             @sl.mouseenter => @scrollLabel.pause()
             @sl.mouseout => @scrollLabel.resume()
             @isScrolling = false
-            @sl.click =>
-                @scroll_down()
-            #判断手机是横屏还是竖屏
-            window.addEventListener "orientationchange", resize if window.orientation?
+            @sl.click => @scroll_down()
+            # #判断手机是横屏还是竖屏
+            # window.addEventListener "orientationchange", resize if window.orientation?
             old_scroll = $(window).scrollTop()
             $(window).scroll =>
                 new_scroll = $(window).scrollTop()
@@ -50,7 +45,7 @@ define (require, exports, module) ->
             @isScrolling = true
             self = @
             $("body").animate {
-                scrollTop: @get_viewport_height()
+                scrollTop: @get_screen_height()
             }, 1000, ->
                 self.isScrolling = false
                 if $(".experience-wrap").attr("init") is "false"

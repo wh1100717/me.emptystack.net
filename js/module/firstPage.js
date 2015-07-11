@@ -6,17 +6,16 @@
     SplitText = require("SplitText");
     Experience = require("./experience");
     Skill = require("../../asset/skill.js");
-    console.log(Skill);
     firstPage = {
       init: function() {
         this.fp = $("#first-page");
-        this.screen_height = this.get_viewport_height();
+        this.screenHeight = this.get_screen_height();
         this.reset_height();
         $(document).scrollTop(0);
         this.animation();
         return this.event_bind();
       },
-      get_viewport_height: function() {
+      get_screen_height: function() {
         if ((window.orientation != null) && Math.abs(window.orientation) === 90) {
           return window.innerWidth;
         } else {
@@ -24,16 +23,16 @@
         }
       },
       reset_height: function() {
-        return this.fp.height(this.screen_height);
+        return this.fp.height(this.screenHeight);
       },
       event_bind: function() {
         var old_scroll;
         $(window).resize((function(_this) {
           return function() {
-            var new_height;
-            new_height = _this.get_viewport_height();
-            if (_this.screen_height !== new_height) {
-              _this.screen_height = new_height;
+            var newHeight;
+            newHeight = _this.get_screen_height();
+            if (_this.screenHeight !== newHeight) {
+              _this.screenHeight = newHeight;
               return _this.reset_height();
             }
           };
@@ -54,9 +53,6 @@
             return _this.scroll_down();
           };
         })(this));
-        if (window.orientation != null) {
-          window.addEventListener("orientationchange", resize);
-        }
         old_scroll = $(window).scrollTop();
         return $(window).scroll((function(_this) {
           return function() {
@@ -83,7 +79,7 @@
         this.isScrolling = true;
         self = this;
         return $("body").animate({
-          scrollTop: this.get_viewport_height()
+          scrollTop: this.get_screen_height()
         }, 1000, function() {
           self.isScrolling = false;
           if ($(".experience-wrap").attr("init") === "false") {

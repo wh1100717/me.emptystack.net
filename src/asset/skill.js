@@ -230,7 +230,6 @@ define(function(require, module, exports) {
                             },
                             r, "<")
                         }),
-                        console.log(h.length),
                         h.length > 0 && (h.forEach(function(e) {
                             e.remove()
                         }), h.clear()),
