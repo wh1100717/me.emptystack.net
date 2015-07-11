@@ -47,12 +47,27 @@
             return _this.scrollLabel.resume();
           };
         })(this));
+        this.sb.mouseenter((function(_this) {
+          return function() {
+            return _this.scrollBack.pause();
+          };
+        })(this));
+        this.sb.mouseout((function(_this) {
+          return function() {
+            return _this.scrollBack.resume();
+          };
+        })(this));
         this.isScrolling = false;
         this.sl.click((function(_this) {
           return function() {
             return _this.scroll_down();
           };
         })(this));
+        this.sb.click(function() {
+          return $("body").animate({
+            scrollTop: 0
+          }, 2000);
+        });
         old_scroll = $(window).scrollTop();
         return $(window).scroll((function(_this) {
           return function() {
@@ -142,7 +157,18 @@
           y: 0,
           delay: 0.5
         });
-        return this.scrollLabel.repeat(-1).repeatDelay(0.5).play();
+        this.scrollLabel.repeat(-1).repeatDelay(0.5).play();
+        this.sb = $(".scroll-back i");
+        this.scrollBack = TweenMax.fromTo(this.sb, 1, {
+          opacity: 0,
+          scale: 0,
+          y: 40
+        }, {
+          opacity: 0.8,
+          scale: 1,
+          y: 0
+        });
+        return this.scrollBack.repeat(-1).repeatDelay(0.5).play();
       }
     };
     return module.exports = firstPage;

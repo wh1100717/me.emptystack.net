@@ -25,8 +25,13 @@ define (require, exports, module) ->
                     @reset_height()
             @sl.mouseenter => @scrollLabel.pause()
             @sl.mouseout => @scrollLabel.resume()
+            @sb.mouseenter => @scrollBack.pause()
+            @sb.mouseout => @scrollBack.resume()
             @isScrolling = false
             @sl.click => @scroll_down()
+            @sb.click -> $("body").animate {
+                scrollTop: 0
+            }, 2000
             # #判断手机是横屏还是竖屏
             # window.addEventListener "orientationchange", resize if window.orientation?
             old_scroll = $(window).scrollTop()
@@ -96,5 +101,16 @@ define (require, exports, module) ->
                 delay: 0.5
             }
             @scrollLabel.repeat(-1).repeatDelay(0.5).play()
+            @sb = $(".scroll-back i")
+            @scrollBack = TweenMax.fromTo @sb, 1, {
+                opacity: 0
+                scale: 0
+                y: 40
+            }, {
+                opacity: 0.8
+                scale: 1
+                y: 0
+            }
+            @scrollBack.repeat(-1).repeatDelay(0.5).play()
 
     module.exports = firstPage
