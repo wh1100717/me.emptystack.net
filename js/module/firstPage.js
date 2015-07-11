@@ -16,8 +16,8 @@
         return this.event_bind();
       },
       get_viewport_height: function() {
+        alert(window.orientation, window.innerWidth, window.innerHeight);
         if (window.orientation && Math.abs(window.orientation) === 90) {
-          alert(window.orientation, window.innerWidth, window.innerHeight);
           return Math.max(document.documentElement.clientWidth, window.innerWidth);
         } else {
           return Math.max(document.documentElement.clientHeight, window.innerHeight);
@@ -27,7 +27,7 @@
         var old_scroll;
         $(window).resize((function(_this) {
           return function() {
-            return _this.fp.height(get_viewport_height());
+            return _this.fp.height(_this.get_viewport_height());
           };
         })(this));
         this.sl.mouseenter((function(_this) {

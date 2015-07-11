@@ -15,13 +15,13 @@ define (require, exports, module) ->
             @animation()
             @event_bind()
         get_viewport_height: ->
+            alert window.orientation, window.innerWidth, window.innerHeight
             if window.orientation and Math.abs(window.orientation) is 90
-                alert window.orientation, window.innerWidth, window.innerHeight
                 Math.max document.documentElement.clientWidth, window.innerWidth
             else
                 Math.max document.documentElement.clientHeight, window.innerHeight
         event_bind: ->
-            $(window).resize => @fp.height(get_viewport_height())
+            $(window).resize => @fp.height(@get_viewport_height())
             @sl.mouseenter => @scrollLabel.pause()
             @sl.mouseout => @scrollLabel.resume()
             @isScrolling = false
