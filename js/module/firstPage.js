@@ -16,7 +16,11 @@
         return this.event_bind();
       },
       get_viewport_height: function() {
-        return Math.max(document.documentElement.clientWidth, window.innerHeight);
+        if (window.orientation && Math.abs(window.orientation) === 90) {
+          return Math.max(document.documentElement.clientWidth, window.innerWidth);
+        } else {
+          return Math.max(document.documentElement.clientHeight, window.innerHeight);
+        }
       },
       event_bind: function() {
         var old_scroll;
@@ -42,7 +46,7 @@
           };
         })(this));
         old_scroll = $(window).scrollTop();
-        return $(window).scroll((function(_this) {
+        $(window).scroll((function(_this) {
           return function() {
             var new_scroll;
             new_scroll = $(window).scrollTop();
@@ -58,6 +62,9 @@
             return _this.scroll_down();
           };
         })(this));
+        if (window.orientation) {
+          return window.addEventListener("onorientationchange", resize);
+        }
       },
       scroll_down: function() {
         var self;
