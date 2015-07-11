@@ -1,7 +1,6 @@
-[Eric Wang](http://me.emptystack.net/)
-=================
-
 ##自我介绍
+
+简历地址：http://me.emptystack.net/
 
 ---
 
