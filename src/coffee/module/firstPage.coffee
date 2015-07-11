@@ -15,6 +15,7 @@ define (require, exports, module) ->
             @animation()
             @event_bind()
         get_viewport_height: ->
+            alert orientation
             if window.orientation and Math.abs(window.orientation) is 90
                 Math.max document.documentElement.clientWidth, window.innerWidth
             else
@@ -38,7 +39,7 @@ define (require, exports, module) ->
                 old_scroll = new_scroll
                 @scroll_down()
             #判断手机是横屏还是竖屏
-            window.addEventListener "onorientationchange", resize if window.orientation
+            window.addEventListener "orientationchange", resize if window.orientation
         scroll_down: ->
             return if @isScrolling
             @isScrolling = true

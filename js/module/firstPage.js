@@ -16,6 +16,7 @@
         return this.event_bind();
       },
       get_viewport_height: function() {
+        alert(orientation);
         if (window.orientation && Math.abs(window.orientation) === 90) {
           return Math.max(document.documentElement.clientWidth, window.innerWidth);
         } else {
@@ -63,7 +64,7 @@
           };
         })(this));
         if (window.orientation) {
-          return window.addEventListener("onorientationchange", resize);
+          return window.addEventListener("orientationchange", resize);
         }
       },
       scroll_down: function() {
