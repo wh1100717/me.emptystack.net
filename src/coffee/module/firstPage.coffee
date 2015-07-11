@@ -10,12 +10,14 @@ define (require, exports, module) ->
     firstPage =
         init: ->
             @fp = $("#first-page")
-            @fp.height($(window).height())
+            @fp.height(@get_viewport_height())
             $(document).scrollTop(0)
             @animation()
             @event_bind()
+        get_viewport_height: ->
+            Math.max document.documentElement.clientWidth, window.innerHeight
         event_bind: ->
-            $(window).resize => @fp.height($(window).height())
+            $(window).resize => @fp.height(get_viewport_height())
             @sl.mouseenter => @scrollLabel.pause()
             @sl.mouseout => @scrollLabel.resume()
             @isScrolling = false
@@ -37,7 +39,7 @@ define (require, exports, module) ->
             @isScrolling = true
             self = @
             $("body").animate {
-                scrollTop: $(window).height()
+                scrollTop: @get_viewport_height()
             }, 1000, ->
                 self.isScrolling = false
                 if $(".experience-wrap").attr("init") is "false"
