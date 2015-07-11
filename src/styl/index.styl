@@ -4,6 +4,7 @@
         font-family: Helvetica, Tahoma, Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 微软雅黑, SimSun, 宋体, Heiti, 黑体, sans-serif;
     }
 }
+
 a
     color rgb(41,222,210)
 .intro-wrap
@@ -33,11 +34,14 @@ a
         display none
         margin 0 auto
         position absolute
-        left 49.5%
         bottom 40px
         color white
-        font-size 40px
+        left 47%
+        font-size 80px
         cursor pointer
+        @media screen and (min-width: 981px)
+            left 49%
+            font-size 40px
 #first-page
     height 5000px
     display table
