@@ -15,8 +15,8 @@ define (require, exports, module) ->
             @animation()
             @event_bind()
         get_viewport_height: ->
-            alert orientation
             if window.orientation and Math.abs(window.orientation) is 90
+                alert window.orientation, window.innerWidth, window.innerHeight
                 Math.max document.documentElement.clientWidth, window.innerWidth
             else
                 Math.max document.documentElement.clientHeight, window.innerHeight
