@@ -10,7 +10,8 @@
     firstPage = {
       init: function() {
         this.fp = $("#first-page");
-        this.fp.height(this.get_viewport_height());
+        this.screen_height = this.get_viewport_height();
+        this.reset_height();
         $(document).scrollTop(0);
         this.animation();
         return this.event_bind();
@@ -22,11 +23,19 @@
           return window.innerHeight;
         }
       },
+      reset_height: function() {
+        return this.fp.height(this.screen_height);
+      },
       event_bind: function() {
         var old_scroll;
         $(window).resize((function(_this) {
           return function() {
-            return _this.fp.height(_this.get_viewport_height());
+            var new_height;
+            new_height = _this.get_viewport_height();
+            if (_this.screen_height !== new_height) {
+              _this.screen_height = new_height;
+              return _this.reset_height();
+            }
           };
         })(this));
         this.sl.mouseenter((function(_this) {
@@ -51,9 +60,11 @@
         old_scroll = $(window).scrollTop();
         return $(window).scroll((function(_this) {
           return function() {
-            var new_scroll;
-            if ((window.orientation != null) && Math.abs(window.orientation) === 90) {
-              return;
+            var new_height, new_scroll;
+            new_height = _this.get_viewport_height();
+            if (_this.screen_height !== new_height) {
+              _this.screen_height = new_height;
+              _this.reset_height();
             }
             new_scroll = $(window).scrollTop();
             if (new_scroll - old_scroll <= 0) {

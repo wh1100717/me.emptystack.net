@@ -10,7 +10,8 @@ define (require, exports, module) ->
     firstPage =
         init: ->
             @fp = $("#first-page")
-            @fp.height(@get_viewport_height())
+            @screen_height = @get_viewport_height()
+            @reset_height()
             $(document).scrollTop(0)
             @animation()
             @event_bind()
@@ -19,8 +20,13 @@ define (require, exports, module) ->
                 return window.innerWidth
             else
                 return window.innerHeight
+        reset_height: -> @fp.height(@screen_height)
         event_bind: ->
-            $(window).resize => @fp.height(@get_viewport_height())
+            $(window).resize =>
+                new_height = @get_viewport_height()
+                if @screen_height isnt new_height
+                    @screen_height = new_height
+                    @reset_height()
             @sl.mouseenter => @scrollLabel.pause()
             @sl.mouseout => @scrollLabel.resume()
             @isScrolling = false
@@ -30,7 +36,10 @@ define (require, exports, module) ->
             window.addEventListener "orientationchange", resize if window.orientation?
             old_scroll = $(window).scrollTop()
             $(window).scroll =>
-                return if window.orientation? and Math.abs(window.orientation) is 90
+                new_height = @get_viewport_height()
+                if @screen_height isnt new_height
+                    @screen_height = new_height
+                    @reset_height()
                 new_scroll = $(window).scrollTop()
                 if new_scroll - old_scroll <= 0
                     old_scroll = new_scroll
