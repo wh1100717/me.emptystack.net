@@ -128,11 +128,11 @@ define(function(require, module, exports) {
                 [300, "Coffeescript"],
                 [250, "LESS/Stylus"],
                 [200, "Jade"],
-                [300, "Bootstrap/Foundation"],
-                [150, "Express/Koa"],
-                [200, "ES5/6/7"],
+                [280, "Bootstrap/Foundation"],
+                [320, "Express/Koa"],
+                [340, "ES5/6/7"],
                 [250, "Grunt/Gulp"],
-                [170, "Webpack"]
+                [280, "Webpack"]
             ],
             "arc-fe-advanced": [
                 [200, "AngularJS"],

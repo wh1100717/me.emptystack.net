@@ -25,8 +25,8 @@ block content
         .intro-wrap
             h1 我的技能
             .content
-                p 目前主要做的方向以Python、Nodejs、前端为主
-                p 目前兴趣点为Famo.us/TweenMax/Material Design/R/量化金融
+                p 目前主要方向以期货/股票程序化交易系统及策略为主
+                p 做过前端、后台、产品、爬虫、交易等等，具有很强的学习能力、理解力和沟通能力。
         .skill-wrap.clearfix.container(init="false")
             .legend
                 ul.skillsList
@@ -38,10 +38,59 @@ block content
     #fourth-page.clearfix
         .intro-wrap.container
             h1 我的项目
-            .content
-                p 2014上半年项目请查看
-                    span: a(href="https://github.com/wh1100717/me.emptystack.net/blob/gh-pages/README.md", target="_blank") 这里
-                p 以下项目不包含公司内部的项目，只是部分托管在Github上的开源项目。
+            table.projectTable
+                th(colspan="2")
+                    i.fa.fa-archive
+                    a(href="http://huidi.trade", target="_blank"): strong 汇迪投资系统
+                tr: td.projectTd
+                    i.fa.fa-star
+                    !=' 汇迪资管系统目前主要针对期货交易，除了使用CTP与期货公司通信部分外，均为我一个人设计、开发和实现。'
+                tr: td.projectTd
+                    i.fa.fa-star
+                    !=' 汇迪资管系统是一整套策略投资管理的系统，其主要包含以下子系统：'
+                tr: td.subProjectTd
+                    i.fa.fa-star
+                    !='交易系统(开仓、平仓、强制平仓、仓位同步、追单、大单拆单等)'
+                tr: td.subProjectTd
+                    i.fa.fa-star
+                    !='策略部署系统(通过Docker部署和运行策略，并输出策略日志等)'
+                tr: td.subProjectTd
+                    i.fa.fa-star
+                    !='报警系统(精细到每一行代码的监控，产生数据丢失、策略运行错误、数据库连接异常等都可以及时以邮件、短信、网站提醒的方式报警)'
+                tr: td.subProjectTd
+                    i.fa.fa-star
+                    !='任务系统(各种数据任务、指标任务，并对其运行状态进行监控)'
+                tr: td.subProjectTd
+                    i.fa.fa-star
+                    !='会计系统(计算策略、投资组合的详细实时会计信息，收盘后结算，并计算日间会计数据等)'
+                tr: td.subProjectTd
+                    i.fa.fa-star
+                    !='Web系统(整合了策略程序的开发和控制、投资组合的管理、策略实时状态和日志的监控及实时和日间数据的展示等)'
+                tr: td.subProjectTd
+                    i.fa.fa-star
+                    !='Node版本的策略框架。'
+                tr: td.projectTd
+                    i.fa.fa-star
+                    !=' 主要用到的库有：bluebird | bootstrap | codemirror | datatables | dockerode | express | jade | nodemailer | passport | react | redis | mysql | mongoose | marked | zmq'
+                tr: td.projectTd
+                    i.fa.fa-star
+                    !=' 主要用到的工具有: agenda-ui | babel | browser-sync | gitbook | gulp | less | webpack'
+                tr: td.projectTd
+                    i.fa.fa-star
+                    !=' (通过证券从业资格考试 && 通过基金从业资格考试)'
+            table.projectTable
+                th(colspan="2")
+                    i.fa.fa-archive
+                    a(href="https://bi.qutke.com/roa", target="_blank"): strong 大类资产收益
+                tr: td.projectTd
+                    i.fa.fa-star
+                    !=' 查询和展示大类资产收益相关的数据及显示的小项目'
+                tr: td.projectTd
+                    i.fa.fa-star
+                    !=' 后端采取Nodejs，前端采用react, redux, 自己封装了适合react使用的highcharts类库'
+                tr: td.projectTd
+                    i.fa.fa-star
+                    !=' 工具使用webpack, babel(ES7), stylus等'
             table.projectTable
                 th(colspan="2")
                     i.fa.fa-archive
@@ -132,6 +181,10 @@ block content
                 tr: td.projectTd
                     i.fa.fa-star
                     !=' jquery-xwaterfall: 一个支持多种 animation 的瀑布流 jQuery 插件'
+            .content
+                p 以上为2014下半年至今的主要项目（内部项目不包含在其中）
+                p 较完整的项目经历请查看
+                    span: a(href="https://github.com/wh1100717/me.emptystack.net/blob/gh-pages/README.md", target="_blank") 这里
             .scroll-back
                 i.fa.fa-angle-double-up
 

@@ -20,15 +20,40 @@
      *     Python&&前端
 *     2014.07 - 2015.07
      *     阿里巴巴
-     *     前端
-
-##项目经历(2015)
-
----
+     *     高级前端开发工程师
+*     2015.07 - 至今
+     *     况客科技
+     *     全栈开发工程师
 
 **Note1**: 以下项目没有特殊说明，则表示我为发起者和主要贡献者。
 
-**Note2**: 以下项目不包含公司内部的项目，只是部分托管在Github上的开源项目。
+## 项目经历(2016)
+
+---
+
+### [汇迪投资系统](http://huidi.trade)
+
+*   汇迪资管系统目前主要针对期货交易，除了使用CTP与期货公司通信部分外，均为我一个人设计、开发和实现。
+*   汇迪资管系统是一整套策略投资管理的系统，其主要包含以下子系统：
+    *   交易系统(开仓、平仓、强制平仓、仓位同步、追单、大单拆单等)
+    *   策略部署系统(通过Docker部署和运行策略，并输出策略日志等)
+    *   报警系统(精细到每一行代码的监控，产生数据丢失、策略运行错误、数据库连接异常等都可以及时以邮件、短信、网站提醒的方式报警)
+    *   任务系统(各种数据任务、指标任务，并对其运行状态进行监控)
+    *   会计系统(计算策略、投资组合的详细实时会计信息，收盘后结算，并计算日间会计数据等)
+    *   Web系统(整合了策略程序的开发和控制、投资组合的管理、策略实时状态和日志的监控及实时和日间数据的展示等)
+    *   Node版本的策略框架。
+*   主要用到的库有：bluebird | bootstrap | codemirror | datatables | dockerode | express | jade | nodemailer | passport | react | redis | mysql | mongoose | marked | zmq
+*   主要用到的工具有: agenda-ui | babel | browser-sync | gitbook | gulp | less | webpack
+
+## 项目经历(2015)
+
+---
+
+### [大类资产收益](https://bi.qutke.com/roa)
+
+*   查询和展示大类资产收益相关的数据及显示的小项目
+*   后端采取Nodejs，前端采用react, redux, 自己封装了适合react使用的highcharts类库
+*   工具使用webpack, babel(ES7), stylus等
 
 ### Fancy
 
@@ -70,7 +95,7 @@
 *   [evemit](https://github.com/wh1100717/evemit): 事件处理库，封装了常用的各种事件处理接口
 *   [jquery-xwaterfall](https://github.com/wh1100717/jquery-xwaterfall): 一个支持多种 animation 的瀑布流 jQuery 插件
 
-##项目经历(2014)
+## 项目经历(2014)
 
 ---
 
